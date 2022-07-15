@@ -1,0 +1,8 @@
+#tbl_mascotas{
+    width: 100%;
+    border: 1px solid black;
+}
+
+#tbl_mascotas td, th{
+    border: 1px solid black;
+}
