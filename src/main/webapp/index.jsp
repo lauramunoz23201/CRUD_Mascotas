@@ -1,7 +1,7 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="com.example.proyectomascotasfba.entities.Mascota"%>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.LinkedList" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <%
     ArrayList<Mascota> mascota = new ArrayList();
 
@@ -10,57 +10,64 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
-    <title>Empleados</title>
+    <title>Mascotas</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1><%= "Mascotas de la fundación Bello Animal" %>
 </h1>
 <br/>
+
+<a href="hello-servlet">Mascotas</a>
 <%
     int a = 15;
-    Employee juan = new Employee("juan", "perez");
-    juan.getId();
-    juan.setAge(20);
-    employees.add(juan);
-    employees.add(new Employee("diego", "bedoya"));
+    Mascota lola = new Mascota("3", "Lola","Cariñosao", "Poddle",true,true,2);
+    lola.getId();
+    lola.setEdad(3);
+    mascota.add(lola);
+    mascota.add(new Mascota("4", "Tomy","Humilde", "Golden",false,true,2));
 %>
-<a href="hello-servlet">Hello Servlet</a>
 <!--<p>a vale: <%= a %></p>
-<b>Nombre: </b><%= employees.get(0).getName() %> -->
+<b>Nombre: </b><%= mascota.get(0).getNombre() %> -->
 
-<form role="form" action="SrvlEmployee" method="post">
+<form role="form" action="SrvlMascota" method="post">
     <fieldset>
-        <legend>Información del empleado</legend>
-        <label>Identificación</label>
-        <input type="text" name="id" id="id"/><br/><br/>
+        <legend>Información de la mascota</legend>
         <label>Nombre</label>
         <input type="text" name="name" id="name"/><br/><br/>
-        <label>Apellido</label>
-        <input type="text" name="lastName" id="lastName"/><br/><br/>
+        <label>Descripción</label>
+        <input type="text" name="descripcion" id="descripcion"/><br/><br/>
+        <label>Raza</label>
+        <input type="text" name="raza" id="raza"/><br/><br/>
+        <label>¿Esta vacunado?</label>
+        <input type="text" name="vacunado" id="vacunado"/><br/><br/>
+        <label>¿Esta esterilizado?</label>
+        <input type="text" name="esterilizado" id="esterilizado"/><br/><br/>
         <label>Edad</label>
-        <input type="number" name="age" id="age"/><br/><br/>
-        <input type="submit" value="Guardar"/>
+        <input type="number" name="edad" id="edad"/><br/><br/>
+        <input class="boton" type="submit" value="Guardar"/>
     </fieldset>
 </form>
 <hr/>
-<table id="tbl_empleyees">
+<table id="tbl_mascotas">
     <thead>
     <tr>
         <th>Identificación</th>
         <th>Nombre</th>
-        <th>Apellido</th>
+        <th>Descripción</th>
+        <th>Raza</th>
         <th>Edad</th>
     </tr>
     </thead>
     <tbody>
     <%
-        for (Employee x: employees){
+        for (Mascota x: mascota){
     %>
     <tr>
         <td><%= x.getId() %></td>
-        <td><%= x.getName() %></td>
-        <td><%= x.getLastName() %></td>
-        <td><%= x.getAge() %></td>
+        <td><%= x.getNombre() %></td>
+        <td><%= x.getDescripcion() %></td>
+        <td><%= x.getRaza() %></td>
+        <td><%= x.getEdad() %></td>
     </tr>
     <%
         }
