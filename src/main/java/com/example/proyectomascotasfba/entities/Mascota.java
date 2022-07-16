@@ -2,7 +2,7 @@ package com.example.proyectomascotasfba.entities;
 
 public class Mascota {
 
-    public int id;
+    public String id;
     public String nombre;
     public String descripcion;
     public String raza;
@@ -10,21 +10,21 @@ public class Mascota {
     public boolean esterilizado;
     public int edad;
 
-    public Mascota(int id, String nombre, String descripcion, String raza, boolean vacunado, boolean esterilizado, int edad) {
+    public Mascota(String id, String nombre, String descripcion, String raza, boolean vacunado, boolean esterilizado, int edad) {
         this.id = id;
         this.nombre = nombre;
-        this.edad = edad;
         this.descripcion = descripcion;
         this.raza = raza;
         this.vacunado = vacunado;
         this.esterilizado = esterilizado;
+        this.edad = edad;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -52,7 +52,7 @@ public class Mascota {
         this.raza = raza;
     }
 
-    public boolean isVacunado() {
+    public boolean getVacunado() {
         return vacunado;
     }
 
@@ -60,7 +60,7 @@ public class Mascota {
         this.vacunado = vacunado;
     }
 
-    public boolean isEsterilizado() {
+    public boolean getEsterilizado() {
         return esterilizado;
     }
 
