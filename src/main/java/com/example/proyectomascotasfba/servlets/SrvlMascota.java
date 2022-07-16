@@ -60,7 +60,6 @@ public class SrvlMascota extends HttpServlet {
         }
         reader.close();
         String params = sb.toString();
-
         return params;
     }
 
@@ -103,10 +102,7 @@ public class SrvlMascota extends HttpServlet {
             out.print(gson.toJson(mascota));
         }
         out.flush();
-
-
     }
-
     private Mascota searchMascotaDelete(String mascotaId) {
         for(int i=0;i<MASCOTAS.size();++i){
             if(MASCOTAS.get(i).getId().equals(mascotaId)){

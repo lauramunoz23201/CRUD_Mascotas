@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <%@ page import="com.example.proyectomascotasfba.entities.Mascota" %>
 <%@ page import="java.util.ArrayList" %>
 
@@ -19,8 +18,8 @@
         <th>Nombre</th>
         <th>Descripción</th>
         <th>Raza</th>
-        <th>Vacunado</th>
-        <th>Estirilizado</th>
+        <th>¿Esta vacunado?</th>
+        <th>¿Esta esterilizado?</th>
         <th>Edad</th>
     </tr>
     </thead>
