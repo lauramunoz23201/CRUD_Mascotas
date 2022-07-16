@@ -1,7 +1,7 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@ page import="com.example.proyectomascotasfba.entities.Mascota" %>
+<%@ page import="java.util.ArrayList" %>
 
 <%
     ArrayList<Mascota> listMascotas = (ArrayList<Mascota> )request.getAttribute("mascotas");
